@@ -1,0 +1,1 @@
+export const paymentMonths: number[] = [2, 5, 8, 11]

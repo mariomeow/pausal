@@ -1,0 +1,42 @@
+{
+    "prvi": {
+        "title": "1. razred",
+        "start": 0.00,
+        "end": 11300.00,
+        "currency": "EUR",
+        "symbol": "€",
+        "pay": 50.85
+    },
+    "drugi": {
+        "title": "2. razred",
+        "start": 11301.00,
+        "end": 15300.00,
+        "currency": "EUR",
+        "symbol": "€",
+        "pay": 68.85
+    },
+    "treci": {
+        "title": "3. razred",
+        "start": 15301.00,
+        "end": 19900.00,
+        "currency": "EUR",
+        "symbol": "€",
+        "pay": 89.55
+    },
+    "cetvrti": {
+        "title": "4. razred",
+        "start": 19901.00,
+        "end": 30600.00,
+        "currency": "EUR",
+        "symbol": "€",
+        "pay": 137.70
+    },
+    "peti": {
+        "title": "5. razred",
+        "start": 30601.00,
+        "end": 40000.00,
+        "currency": "EUR",
+        "symbol": "€",
+        "pay": 180.00
+    }
+}

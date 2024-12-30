@@ -1,0 +1,32 @@
+[
+    {
+        "opis": "Obvezno zdrastveno osiguranje",
+        "ikona": "solar:health-bold",
+        "kategorija": "Doprinosi",
+        "krajnjiDatum": 15,
+        "trosak": 102.96,
+        "kratica": "ozs"
+    },
+    {
+        "opis": "Mirovinsko osiguranje",
+        "ikona": "streamline:insurance-hand-solid",
+        "kategorija": "Doprinosi",
+        "krajnjiDatum": 15,
+        "trosak": 93.60,
+        "kratica": "mo"
+    },
+    {
+        "opis": "Mirovinsko osiguranje za starost na temelju ind. kapit. štednje",
+        "ikona": "streamline:insurance-hand-solid",
+        "kategorija": "Doprinosi",
+        "krajnjiDatum": 15,
+        "trosak": 31.20,
+        "kratica": "mozsntiks"
+    },
+    {
+        "opis": "Paušalni porez na dohodak",
+        "ikona": "heroicons-solid:receipt-tax",
+        "kategorija": "Porez",
+        "kratica": "ppnd"
+    }
+]
