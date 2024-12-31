@@ -32,6 +32,7 @@
 		"vite": "^5.4.11"
 	},
 	"dependencies": {
+		"@sveltejs/adapter-vercel": "^5.5.2",
 		"canvas-confetti": "^1.9.3",
 		"svelte-french-toast": "^1.2.0"
 	}
