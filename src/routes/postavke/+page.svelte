@@ -2,12 +2,33 @@
 	import Note from "$lib/components/NoteLeft.svelte"
 	import Icon from "@iconify/svelte"
 	import Razredi from "$lib/razredi.json"
-	import { pausalInfo, setTaxBracket } from "$lib/scripts/localStorage.svelte"
+	import { pausalInfo, setTaxBracket, setPausalOption } from "$lib/scripts/localStorage.svelte"
 	import Switch from "$lib/components/Switch.svelte"
 	import toast from "svelte-french-toast"
+	import { fade } from "svelte/transition"
+	import TuristickeZajednice from "$lib/turistickezajednice.json"
+
+	function setToZero(node: HTMLInputElement) {
+		function focusOut() {
+			node.value = String(Number(node.value))
+			pausalInfo.turisticke_zajednice_info.promet = Number(node.value)
+		}
+
+		node.addEventListener("focusout", focusOut)
+
+		return {
+			destroy: () => {
+				node.removeEventListener("focusout", focusOut)
+			}
+		}
+	}
 </script>
 
-<Note />
+<svelte:head>
+	<title>Paušal - Postavke</title>
+</svelte:head>
+
+<Note naslov="Postavke" />
 <div class="postavke">
 	<div class="card-group">
 		<div class="postavka">
@@ -83,5 +104,39 @@
 				>
 			</div>
 		</div>
+		{#if pausalInfo.turisticke_zajednice}
+			<div class="postavka" in:fade={{ duration: 200 }}>
+				<h1><Icon icon="mdi:donation" /> Odaberite skupinu i unesite ukupan promet</h1>
+				<div class="dva-inputa">
+					<select bind:value={pausalInfo.turisticke_zajednice_info.skupina}>
+						{#each Object.entries(TuristickeZajednice) as item}
+							<option value={item[1].skupina}
+								>{item[1].skupina.charAt(0).toUpperCase() +
+									item[1].skupina.slice(1, item[1].skupina.length)}</option
+							>
+						{/each}
+					</select>
+					<div class="euro-input">
+						<input
+							use:setToZero
+							type="number"
+							bind:value={pausalInfo.turisticke_zajednice_info.promet}
+						/>
+						<span>€</span>
+					</div>
+				</div>
+				<button
+					onclick={() => {
+						setPausalOption("turisticke_zajednice_info", false, {
+							...pausalInfo.turisticke_zajednice_info
+						})
+						toast.success("Uspješno ste promijenili skupinu i promet", {
+							position: "bottom-center",
+							style: "background-color: #333; color: white;"
+						})
+					}}>Primijeni</button
+				>
+			</div>
+		{/if}
 	</div>
 </div>

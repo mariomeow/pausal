@@ -1,0 +1,22 @@
+[
+    {
+        "skupina": "prva",
+        "stopa": 0.14212
+    },
+    {
+        "skupina": "druga",
+        "stopa": 0.11367
+    },
+    {
+        "skupina": "treca",
+        "stopa": 0.08527
+    },
+    {
+        "skupina": "cetvrta",
+        "stopa": 0.02842
+    },
+    {
+        "skupina": "peta",
+        "stopa": 0.01705
+    }
+]

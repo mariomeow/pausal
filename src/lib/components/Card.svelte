@@ -6,6 +6,7 @@
 	import { SvelteDate } from "svelte/reactivity"
 	import { updateEntry } from "$lib/scripts/localStorage.svelte"
 	import { pausalInfo } from "$lib/scripts/localStorage.svelte"
+	import { scale } from "svelte/transition"
 
 	let {
 		doprinos,
@@ -50,7 +51,9 @@
 			}}
 		>
 			{#if monthData[doprinos.kratica]}
-				<Icon icon="material-symbols:check" />
+				<div class="checkmark-box" transition:scale={{ duration: 200 }}>
+					<Icon icon="material-symbols:check" />
+				</div>
 			{/if}
 		</button>
 	</div>

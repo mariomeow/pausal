@@ -143,6 +143,11 @@ nav a svg {
     background-color: transparent;
     border-radius: 5px;
     cursor: pointer;
+    transition: border 0.3s ease;
+}
+
+.card-right button:hover {
+    border: 1px solid var(--lighter);
 }
 
 .card-right button svg {
@@ -206,6 +211,55 @@ nav a svg {
 
 .postavka-content a:hover {
     color: var(--lighter);
+}
+
+.postavka .dva-inputa {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 10px;
+}
+
+.postavka .dva-inputa input {
+    width: 150px;
+    padding: 10px 25px 10px 10px;
+    box-sizing: border-box;
+    color: var(--lighter);
+    background-color: #1d2022;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    outline: none;
+    appearance: textfield;
+}
+
+.postavka button {
+    background-color: white;
+    padding: 8px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    color: black;
+    transition: background-color 0.3s ease;
+}
+
+.postavka button:hover {
+    background-color: rgb(224, 224, 224);
+}
+
+.euro-input {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.euro-input span {
+    color: var(--lighter);
+    font-weight: bold;
+    position: absolute;
+    right: 10px;
+    pointer-events: none;
 }
 
 .switch {

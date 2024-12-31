@@ -9,12 +9,16 @@
 	const doprinosi = Doprinosi as doprinosType[]
 
 	let { monthData, date }: { date: SvelteDate; monthData: monthDataType } = $props()
+
+	$inspect(date.getMonth())
 </script>
 
 <div class="card-group">
 	{#each doprinosi as doprinos}
-		{#if doprinos.kategorija == "Porez" && taxPaymentMonths.find((item) => item == date.getMonth())}
-			<Card {doprinos} {monthData} {date} />
+		{#if doprinos.kategorija == "Porez"}
+			{#if taxPaymentMonths.find((item) => item == date.getMonth())}
+				<Card {doprinos} {monthData} {date} />
+			{/if}
 		{:else if doprinos.kratica == "kd"}
 			{#if pausalInfo.komorski_doprinos && komorskiPaymentDates[date.getMonth()]}
 				<Card {doprinos} {monthData} {date} />

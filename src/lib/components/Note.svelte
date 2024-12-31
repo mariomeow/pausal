@@ -13,16 +13,27 @@
 
 	let neRjeseno = $derived.by(() => {
 		let ukupno: number = Object.values(monthData).filter((item) => item == false).length
+		console.log("Pocetak", ukupno)
 
 		if (!pausalInfo.komorski_doprinos) {
 			ukupno--
+			console.log("Nema komorski -1", ukupno)
 		} else if (!komorskiPaymentDates[new SvelteDate().getMonth()]) {
 			ukupno--
+			console.log("Nije komorski mjesec -1", ukupno)
 		}
 
-		if (pausalInfo.poslodavac) ukupno -= 3
+		if (pausalInfo.poslodavac) {
+			ukupno -= 3
+			console.log("IMA POSLODAVCA -3")
+		}
 
-		if (!taxPaymentMonths.find((item) => item == new SvelteDate().getMonth())) ukupno--
+		if (!taxPaymentMonths.find((item) => item == new SvelteDate().getMonth())) {
+			ukupno--
+			console.log("Nije mjesec za porez -1")
+		}
+
+		console.log("NA KRAJU: ", ukupno)
 
 		return ukupno
 	})
