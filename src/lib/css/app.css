@@ -149,3 +149,99 @@ nav a svg {
     font-size: 20px;
     color: lightgreen;
 }
+
+.noteLeft {
+    text-align: left;
+    padding: 15px;
+    border-bottom: 1px solid var(--border-color);
+    border-top: 1px solid var(--border-color);
+}
+
+.postavka {
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+}
+
+.postavka h1 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 15px;
+}
+
+.postavka select {
+    padding: 10px;
+    box-sizing: border-box;
+    color: var(--lighter);
+    width: 100%;
+    background-color: #1d2022;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+}
+
+.postavka-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.postavka-content p {
+    color: var(--lighter);
+    max-width: 90%;
+    line-height: 24px;
+    margin-bottom: 10px;
+}
+
+.postavka-content a {
+    color: #e7e9ea;
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.postavka-content a:hover {
+    color: var(--lighter);
+}
+
+.switch {
+    position: relative;
+    width: 40px;
+    height: 15px;
+    background-color: #1d2022;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.switch .switch-circle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    top: -2.5px;
+    left: 0px;
+    transition: left 0.2s ease;
+}
+
+.switch-clicked {
+    left: 20px !important;
+}
+
+.switch-background {
+    background-color: var(--lighter);
+}
+
+@keyframes pulse-animation {
+    0% {
+        box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0.4);
+    }
+
+    100% {
+        box-shadow: 0px 0px 0px 10px rgba(255, 255, 255, 0);
+    }
+}

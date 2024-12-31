@@ -24,6 +24,13 @@
         "kratica": "mozsntiks"
     },
     {
+        "opis": "Komorski doprinos",
+        "ikona": "ri:building-fill",
+        "kategorija": "Doprinosi",
+        "trosak": 31.92,
+        "kratica": "kd"
+    },
+    {
         "opis": "Paušalni porez na dohodak",
         "ikona": "heroicons-solid:receipt-tax",
         "kategorija": "Porez",

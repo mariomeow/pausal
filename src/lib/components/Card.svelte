@@ -2,6 +2,7 @@
 	import Icon from "@iconify/svelte"
 	import type { doprinosType, monthDataType } from "$lib/types"
 	import Razredi from "$lib/razredi.json"
+	import { komorskiPaymentDates } from "$lib/constants"
 	import { SvelteDate } from "svelte/reactivity"
 	import { updateEntry } from "$lib/scripts/localStorage.svelte"
 	import { pausalInfo } from "$lib/scripts/localStorage.svelte"
@@ -25,7 +26,9 @@
 		<span
 			>{doprinos.krajnjiDatum
 				? `${doprinos.krajnjiDatum}.${date.getMonth() + 1}`
-				: `${new SvelteDate(date.getFullYear(), date.getMonth() + 1, 0).getDate()}.${date.getMonth() + 1}`}
+				: doprinos.kratica == "kd"
+					? `${komorskiPaymentDates[date.getMonth()]}.${date.getMonth() + 1}`
+					: `${new SvelteDate(date.getFullYear(), date.getMonth() + 1, 0).getDate()}.${date.getMonth() + 1}`}
 			/ {doprinos.kategorija == "Doprinosi"
 				? doprinos.trosak?.toFixed(2)
 				: Razredi[pausalInfo.tax].pay}
