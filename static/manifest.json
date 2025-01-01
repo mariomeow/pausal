@@ -1,0 +1,17 @@
+{
+    "name": "Paušal",
+    "icons": [
+        {
+            "src": "/favicon.ico",
+            "type": "image/ico",
+            "sizes": "16x16"
+        }
+    ],
+    "start_url": "/",
+    "display": "standalone",
+    "prefer_related_applications": false,
+    "categories": [
+        "finance"
+    ],
+    "description": "Aplikacija za praćenje financija u paušalnom obrtu"
+}

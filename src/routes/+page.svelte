@@ -40,3 +40,5 @@
 		}}>{prikaziPovijest ? "Sakrij povijest" : "Prikaži povijest"}</button
 	>
 {/if}
+
+<button>Play notification</button>
