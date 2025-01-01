@@ -5,3 +5,5 @@ export const komorskiPaymentDates: Record<number, number> = {
     7: 31,
     10: 30,
 }
+export const eyeClosed: string = "akar-icons:eye-closed"
+export const eyeOpen: string = "akar-icons:eye"

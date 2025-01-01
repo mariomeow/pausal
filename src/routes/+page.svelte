@@ -1,20 +1,14 @@
 <script lang="ts">
 	import Cards from "$lib/components/Cards.svelte"
 	import Note from "$lib/components/Note.svelte"
-	import CardYearly from "$lib/components/CardYearly.svelte"
 	import { database, pausalInfo } from "$lib/scripts/localStorage.svelte"
 	import { SvelteDate } from "svelte/reactivity"
+	import TuristickeNote from "$lib/components/TuristickeNote.svelte"
 	import type { monthDataType } from "$lib/types"
 
 	const myDate: SvelteDate = new SvelteDate()
 	let currentMonthData = $derived(database.map.get(`${myDate.getMonth()}/${myDate.getFullYear()}`))
 	let prikaziPovijest: boolean = $state(false)
-
-	let sortedYearly = $derived(
-		$state
-			.snapshot(pausalInfo.turisticke_zajednice_info.godine)
-			.sort((a: number, b: number) => b - a)
-	)
 </script>
 
 <svelte:head>
@@ -22,14 +16,7 @@
 </svelte:head>
 
 {#if pausalInfo.turisticke_zajednice}
-	<div class="note">
-		<h2>Članarina za turističku zajednicu</h2>
-	</div>
-	<div class="card-group">
-		{#each sortedYearly as year}
-			<CardYearly {year} />
-		{/each}
-	</div>
+	<TuristickeNote />
 {/if}
 <Note mjesec={myDate.toLocaleDateString("hr", { month: "long" })} monthData={currentMonthData!} />
 <Cards monthData={currentMonthData as monthDataType} date={myDate} />

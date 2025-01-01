@@ -116,5 +116,29 @@ export function updateEntry(key: string, field: "ozs" | "mo" | "mozsntiks" | "pp
     localStorage.setItem("pausal", JSON.stringify(Array.from(database.map)))
 }
 
+function getUISettings() {
+    const defaultUISettings = {
+        hideTuristicke: false,
+        hideRacuni: false
+    }
+
+    if (!localStorage.getItem("pausalSettings")) {
+        localStorage.setItem("pausalSettings", JSON.stringify(defaultUISettings))
+        return defaultUISettings
+    }
+
+    return JSON.parse(localStorage.getItem("pausalSettings")!) as { hideTuristicke: boolean, hideRacuni: boolean }
+}
+
+export function setUISetting(setting: "hideTuristicke" | "hideRacuni") {
+    localStorage.setItem("pausalSettings", JSON.stringify({
+        ...UI.settings,
+        [setting]: !UI.settings[setting]
+    }))
+
+    UI.settings = getUISettings()
+}
+
 export const pausalInfo = $state({ tax: getTaxBracket(), poslodavac: getPausalOption("poslodavac"), komorski_doprinos: getPausalOption("komorski_doprinos"), turisticke_zajednice: getPausalOption("turisticke_zajednice"), turisticke_zajednice_info: getPausalOption("turisticke_zajednice_info") })
 export const database = $state({ map: getDatabaseMap() })
+export const UI = $state({ settings: getUISettings() })

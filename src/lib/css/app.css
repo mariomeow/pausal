@@ -71,6 +71,28 @@ nav a svg {
     border-top: 1px solid var(--border-color);
 }
 
+.note h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.note button {
+    font-size: 100%;
+    color: inherit;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    right: 20px;
+    position: absolute;
+    background-color: transparent;
+    border: none;
+}
+
 .card-group {
     display: grid;
     grid-template-columns: 1fr;
