@@ -9,6 +9,14 @@
 	const myDate: SvelteDate = new SvelteDate()
 	let currentMonthData = $derived(database.map.get(`${myDate.getMonth()}/${myDate.getFullYear()}`))
 	let prikaziPovijest: boolean = $state(false)
+
+	let eV = $state()
+
+	window.addEventListener("beforeinstallprompt", (e) => {
+		e.preventDefault()
+
+		eV = e
+	})
 </script>
 
 <svelte:head>
@@ -51,4 +59,9 @@
 			})
 		}
 	}}>Notifikacija</button
+>
+<button
+	onclick={() => {
+		eV.prompt()
+	}}>HM</button
 >
