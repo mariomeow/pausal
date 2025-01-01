@@ -2,4 +2,4 @@
 
 ### Todo
 
-1. Dodati mogućnost smanjivanja doprinosa za turističku zajednicu
+1. Dodati Capacitor za mobile app

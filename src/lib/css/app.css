@@ -1,323 +1,334 @@
 * {
-    margin: 0px;
-    padding: 0px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	margin: 0px;
+	padding: 0px;
+	font-family:
+		system-ui,
+		-apple-system,
+		BlinkMacSystemFont,
+		"Segoe UI",
+		Roboto,
+		Oxygen,
+		Ubuntu,
+		Cantarell,
+		"Open Sans",
+		"Helvetica Neue",
+		sans-serif;
 }
 
 :root {
-    color: #e7e9ea;
-    background-color: #000;
-    --border-color: #2F3336;
-    --lighter: #71767B;
+	color: #e7e9ea;
+	background-color: #000;
+	--border-color: #2f3336;
+	--lighter: #71767b;
 }
 
 main {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
 }
 
 nav {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    gap: 15px;
-    padding: 15px;
-    position: absolute;
-    left: calc(50% - 300px - 250px);
-    min-width: 250px;
-    box-sizing: border-box;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
+	gap: 15px;
+	padding: 15px;
+	position: absolute;
+	left: calc(50% - 300px - 250px);
+	min-width: 250px;
+	box-sizing: border-box;
 }
 
 nav a {
-    color: white;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    font-size: 20px;
-    border-radius: 20px;
-    padding: 10px;
-    transition: background-color 0.3s ease;
+	color: white;
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	font-size: 20px;
+	border-radius: 20px;
+	padding: 10px;
+	transition: background-color 0.3s ease;
 }
 
 nav a:hover {
-    background-color: #181818;
+	background-color: #181818;
 }
 
 nav a[aria-current="page"] {
-    font-weight: bold;
+	font-weight: bold;
 }
 
 nav a svg {
-    font-size: 35px;
+	font-size: 35px;
 }
 
 .content-wrapper {
-    height: 100vh;
-    width: 600px;
-    box-sizing: border-box;
-    overflow-y: auto;
-    border-left: 1px solid var(--border-color);
-    border-right: 1px solid var(--border-color);
-    padding-bottom: 15px;
+	height: 100vh;
+	width: 600px;
+	box-sizing: border-box;
+	overflow-y: auto;
+	border-left: 1px solid var(--border-color);
+	border-right: 1px solid var(--border-color);
+	padding-bottom: 15px;
 }
 
 .note {
-    text-align: center;
-    padding: 15px;
-    border-bottom: 1px solid var(--border-color);
-    border-top: 1px solid var(--border-color);
+	text-align: center;
+	padding: 15px;
+	border-bottom: 1px solid var(--border-color);
+	border-top: 1px solid var(--border-color);
 }
 
 .note h2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
 }
 
 .note button {
-    font-size: 100%;
-    color: inherit;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 25px;
-    height: 25px;
-    right: 20px;
-    position: absolute;
-    background-color: transparent;
-    border: none;
+	font-size: 100%;
+	color: inherit;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 25px;
+	height: 25px;
+	right: 20px;
+	position: absolute;
+	background-color: transparent;
+	border: none;
 }
 
 .card-group {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    gap: 15px;
-    padding: 15px;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
+	gap: 15px;
+	padding: 15px;
 }
 
 .card {
-    display: grid;
-    grid-template-columns: min-content auto min-content;
-    grid-template-rows: auto;
-    gap: 10px;
-    padding: 20px;
-    border: 1px solid var(--border-color);
-    border-radius: 20px;
+	display: grid;
+	grid-template-columns: min-content auto min-content;
+	grid-template-rows: auto;
+	gap: 10px;
+	padding: 20px;
+	border: 1px solid var(--border-color);
+	border-radius: 20px;
 }
 
 .card div {
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
 }
 
 .card .card-left {
-    font-size: 22px;
+	font-size: 22px;
 }
 
 .card .card-middle h1 {
-    font-size: 20px;
-    line-height: 20px;
-    margin-bottom: 15px;
+	font-size: 20px;
+	line-height: 20px;
+	margin-bottom: 15px;
 }
 
 .card .card-middle p {
-    margin-bottom: 10px;
+	margin-bottom: 10px;
 }
 
 .card .card-middle span {
-    color: var(--lighter);
+	color: var(--lighter);
 }
 
 .card .card-right {
-    justify-content: center;
+	justify-content: center;
 }
 
-.content-wrapper>button {
-    margin-left: 15px;
-    background-color: white;
-    padding: 10px;
-    border-radius: 20px;
-    border: none;
-    font-weight: bold;
-    cursor: pointer;
-    color: black;
-    transition: background-color 0.3s ease;
+.content-wrapper > button {
+	margin-left: 15px;
+	background-color: white;
+	padding: 10px;
+	border-radius: 20px;
+	border: none;
+	font-weight: bold;
+	cursor: pointer;
+	color: black;
+	transition: background-color 0.3s ease;
 }
 
-.content-wrapper>button:hover {
-    background-color: rgb(224, 224, 224);
+.content-wrapper > button:hover {
+	background-color: rgb(224, 224, 224);
 }
 
 .card-right button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 25px;
-    height: 25px;
-    border: 1px solid var(--border-color);
-    background-color: transparent;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: border 0.3s ease;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 25px;
+	height: 25px;
+	border: 1px solid var(--border-color);
+	background-color: transparent;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: border 0.3s ease;
 }
 
 .card-right button:hover {
-    border: 1px solid var(--lighter);
+	border: 1px solid var(--lighter);
 }
 
 .card-right button svg {
-    font-size: 20px;
-    color: lightgreen;
+	font-size: 20px;
+	color: lightgreen;
 }
 
 .noteLeft {
-    text-align: left;
-    padding: 15px;
-    border-bottom: 1px solid var(--border-color);
-    border-top: 1px solid var(--border-color);
+	text-align: left;
+	padding: 15px;
+	border-bottom: 1px solid var(--border-color);
+	border-top: 1px solid var(--border-color);
 }
 
 .postavka {
-    padding: 20px;
-    border: 1px solid var(--border-color);
-    border-radius: 20px;
+	padding: 20px;
+	border: 1px solid var(--border-color);
+	border-radius: 20px;
 }
 
 .postavka h1 {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 10px;
-    font-size: 20px;
-    line-height: 20px;
-    margin-bottom: 15px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 10px;
+	font-size: 20px;
+	line-height: 20px;
+	margin-bottom: 15px;
 }
 
 .postavka select {
-    padding: 10px;
-    box-sizing: border-box;
-    color: var(--lighter);
-    width: 100%;
-    background-color: #1d2022;
-    border: 1px solid var(--border-color);
-    border-radius: 10px;
+	padding: 10px;
+	box-sizing: border-box;
+	color: var(--lighter);
+	width: 100%;
+	background-color: #1d2022;
+	border: 1px solid var(--border-color);
+	border-radius: 10px;
 }
 
 .postavka-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
 }
 
 .postavka-content p {
-    color: var(--lighter);
-    max-width: 90%;
-    line-height: 24px;
-    margin-bottom: 10px;
+	color: var(--lighter);
+	max-width: 90%;
+	line-height: 24px;
+	margin-bottom: 10px;
 }
 
 .postavka-content a {
-    color: #e7e9ea;
-    font-weight: bold;
-    font-size: 14px;
-    text-decoration: none;
-    transition: color 0.3s ease;
+	color: #e7e9ea;
+	font-weight: bold;
+	font-size: 14px;
+	text-decoration: none;
+	transition: color 0.3s ease;
 }
 
 .postavka-content a:hover {
-    color: var(--lighter);
+	color: var(--lighter);
 }
 
 .postavka .dva-inputa {
-    margin-bottom: 15px;
-    display: flex;
-    align-items: stretch;
-    justify-content: center;
-    gap: 10px;
+	margin-bottom: 15px;
+	display: flex;
+	align-items: stretch;
+	justify-content: center;
+	gap: 10px;
 }
 
 .postavka .dva-inputa input {
-    width: 150px;
-    padding: 10px 25px 10px 10px;
-    box-sizing: border-box;
-    color: var(--lighter);
-    background-color: #1d2022;
-    border: 1px solid var(--border-color);
-    border-radius: 10px;
-    outline: none;
-    appearance: textfield;
+	width: 150px;
+	padding: 10px 25px 10px 10px;
+	box-sizing: border-box;
+	color: var(--lighter);
+	background-color: #1d2022;
+	border: 1px solid var(--border-color);
+	border-radius: 10px;
+	outline: none;
+	appearance: textfield;
 }
 
 .postavka button {
-    background-color: white;
-    padding: 8px;
-    border-radius: 20px;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-    color: black;
-    transition: background-color 0.3s ease;
+	background-color: white;
+	padding: 8px;
+	border-radius: 20px;
+	border: none;
+	cursor: pointer;
+	font-weight: bold;
+	color: black;
+	transition: background-color 0.3s ease;
 }
 
 .postavka button:hover {
-    background-color: rgb(224, 224, 224);
+	background-color: rgb(224, 224, 224);
 }
 
 .euro-input {
-    display: flex;
-    align-items: center;
-    position: relative;
+	display: flex;
+	align-items: center;
+	position: relative;
 }
 
 .euro-input span {
-    color: var(--lighter);
-    font-weight: bold;
-    position: absolute;
-    right: 10px;
-    pointer-events: none;
+	color: var(--lighter);
+	font-weight: bold;
+	position: absolute;
+	right: 10px;
+	pointer-events: none;
 }
 
 .switch {
-    position: relative;
-    width: 40px;
-    height: 15px;
-    background-color: #1d2022;
-    border-radius: 20px;
-    transition: background-color 0.3s ease;
+	position: relative;
+	width: 40px;
+	height: 15px;
+	background-color: #1d2022;
+	border-radius: 20px;
+	transition: background-color 0.3s ease;
 }
 
 .switch .switch-circle {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background-color: white;
-    border-radius: 50%;
-    top: -2.5px;
-    left: 0px;
-    transition: left 0.2s ease;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	background-color: white;
+	border-radius: 50%;
+	top: -2.5px;
+	left: 0px;
+	transition: left 0.2s ease;
 }
 
 .switch-clicked {
-    left: 20px !important;
+	left: 20px !important;
 }
 
 .switch-background {
-    background-color: var(--lighter);
+	background-color: var(--lighter);
 }
 
 @keyframes pulse-animation {
-    0% {
-        box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0.4);
-    }
+	0% {
+		box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0.4);
+	}
 
-    100% {
-        box-shadow: 0px 0px 0px 10px rgba(255, 255, 255, 0);
-    }
+	100% {
+		box-shadow: 0px 0px 0px 10px rgba(255, 255, 255, 0);
+	}
 }

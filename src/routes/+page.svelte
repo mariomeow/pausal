@@ -9,14 +9,6 @@
 	const myDate: SvelteDate = new SvelteDate()
 	let currentMonthData = $derived(database.map.get(`${myDate.getMonth()}/${myDate.getFullYear()}`))
 	let prikaziPovijest: boolean = $state(false)
-
-	let eV = $state()
-
-	window.addEventListener("beforeinstallprompt", (e) => {
-		e.preventDefault()
-
-		eV = e
-	})
 </script>
 
 <svelte:head>
@@ -48,20 +40,3 @@
 		}}>{prikaziPovijest ? "Sakrij povijest" : "Prikaži povijest"}</button
 	>
 {/if}
-<button
-	onclick={async () => {
-		await Notification.requestPermission()
-
-		if (Notification.permission == "granted") {
-			new Notification("Example notification", {
-				body: "This is more text",
-				silent: false
-			})
-		}
-	}}>Notifikacija</button
->
-<button
-	onclick={() => {
-		eV.prompt()
-	}}>HM</button
->
