@@ -41,4 +41,19 @@
 	>
 {/if}
 
-<button>Play notification</button>
+<button
+	onclick={() => {
+		Notification.requestPermission()
+	}}>Give notification permissions</button
+>
+<button
+	onclick={() => {
+		if ("Notification" in window) {
+			if (Notification.permission == "granted") {
+				new Notification("naslov", {
+					body: "YOO!"
+				})
+			}
+		}
+	}}>Play notification</button
+>
