@@ -1,4 +1,4 @@
-# Paušel - aplikacija za praćenje financija u paušalnom obrtu
+# Paušal - aplikacija za praćenje financija u paušalnom obrtu
 
 ### Todo
 
