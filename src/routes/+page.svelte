@@ -40,3 +40,15 @@
 		}}>{prikaziPovijest ? "Sakrij povijest" : "Prikaži povijest"}</button
 	>
 {/if}
+<button
+	onclick={async () => {
+		await Notification.requestPermission()
+
+		if (Notification.permission == "granted") {
+			new Notification("Example notification", {
+				body: "This is more text",
+				silent: false
+			})
+		}
+	}}>Notifikacija</button
+>
