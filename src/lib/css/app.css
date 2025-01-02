@@ -72,7 +72,6 @@ nav a svg {
 	overflow-y: auto;
 	border-left: 1px solid var(--border-color);
 	border-right: 1px solid var(--border-color);
-	padding-bottom: 15px;
 }
 
 .note {
@@ -150,7 +149,7 @@ nav a svg {
 	justify-content: center;
 }
 
-.content-wrapper > button {
+.content-wrapper>button {
 	margin-left: 15px;
 	background-color: white;
 	padding: 10px;
@@ -162,7 +161,7 @@ nav a svg {
 	transition: background-color 0.3s ease;
 }
 
-.content-wrapper > button:hover {
+.content-wrapper>button:hover {
 	background-color: rgb(224, 224, 224);
 }
 
@@ -281,6 +280,10 @@ nav a svg {
 	background-color: rgb(224, 224, 224);
 }
 
+.postavka:last-of-type {
+	padding-bottom: 15px;
+}
+
 .euro-input {
 	display: flex;
 	align-items: center;
@@ -330,5 +333,125 @@ nav a svg {
 
 	100% {
 		box-shadow: 0px 0px 0px 10px rgba(255, 255, 255, 0);
+	}
+}
+
+.mobile-nav {
+	display: none;
+}
+
+.spacing {
+	display: none;
+}
+
+@media screen and (max-width: 1100px) {
+	.content-wrapper {
+		width: 400px;
+	}
+
+	.note button {
+		right: 0px;
+	}
+
+	.note h2 {
+		font-size: 18px;
+	}
+
+	.card .card-middle h1 {
+		font-size: 18px;
+	}
+
+	.card .card-middle p {
+		font-size: 15px;
+	}
+
+	.card .card-middle span {
+		font-size: 15px;
+	}
+
+	.noteLeft h2 {
+		font-size: 18px;
+	}
+
+	.postavka h1 {
+		font-size: 18px;
+	}
+
+	.postavka-content p {
+		max-width: 100%;
+		font-size: 15px;
+	}
+
+	nav {
+		left: calc(50% - 200px - 250px);
+	}
+
+	nav a {
+		font-size: 18px;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	nav a span {
+		display: none;
+	}
+
+	nav {
+		min-width: auto;
+		width: 80px;
+		left: calc(50% - 200px - 80px);
+	}
+
+	nav a {
+		width: max-content;
+	}
+
+	nav a svg {
+		font-size: 30px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.content-wrapper {
+		width: 100%;
+	}
+
+	.note button {
+		right: 10px;
+	}
+
+	nav {
+		display: none;
+	}
+
+	.mobile-nav {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		position: fixed;
+		left: 0px;
+		bottom: 0px;
+		width: 100%;
+		background-color: #000;
+		z-index: 1;
+		height: 60px;
+		padding: 0px 20px;
+		box-sizing: border-box;
+		border-top: 1px solid var(--border-color);
+	}
+
+	.mobile-nav a {
+		color: white;
+	}
+
+	.mobile-nav a svg {
+		font-size: 30px;
+	}
+
+	.spacing {
+		width: 100%;
+		height: 60px;
+		background-color: red;
+		display: block;
 	}
 }

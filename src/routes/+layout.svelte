@@ -10,4 +10,5 @@
 	<Nav />
 	<div class="content-wrapper">{@render children()}</div>
 </main>
+<div class="spacing"></div>
 <Toaster />
