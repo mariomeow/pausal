@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { setPausalOption, pausalInfo } from "$lib/scripts/localStorage.svelte"
 	import toast from "svelte-french-toast"
+	import { screen } from "$lib/scripts/localStorage.svelte"
 
 	let { option }: { option: "poslodavac" | "komorski_doprinos" | "turisticke_zajednice" } = $props()
 
@@ -15,8 +16,8 @@
 		setPausalOption(option, !pausalInfo[option])
 
 		toast.success("Uspješno ste primjenili postavke", {
-			position: "bottom-center",
-			style: "background-color: #333; color: white;"
+			position: screen.isMobile ? "top-right" : "bottom-center",
+			className: "toast-css"
 		})
 
 		switchCircleElement!.classList.toggle("switch-clicked")

@@ -200,5 +200,11 @@ export const pausalInfo = $state({
 	turisticke_zajednice: getPausalOption("turisticke_zajednice"),
 	turisticke_zajednice_info: getPausalOption("turisticke_zajednice_info")
 })
+
 export const database = $state({ map: getDatabaseMap() })
 export const UI = $state({ settings: getUISettings() })
+export const screen = $state({
+	width: window.innerWidth,
+	height: window.innerHeight,
+	isMobile: false
+})

@@ -2,7 +2,12 @@
 	import Note from "$lib/components/NoteLeft.svelte"
 	import Icon from "@iconify/svelte"
 	import Razredi from "$lib/razredi.json"
-	import { pausalInfo, setTaxBracket, setPausalOption } from "$lib/scripts/localStorage.svelte"
+	import {
+		pausalInfo,
+		setTaxBracket,
+		setPausalOption,
+		screen
+	} from "$lib/scripts/localStorage.svelte"
 	import Switch from "$lib/components/Switch.svelte"
 	import toast from "svelte-french-toast"
 	import { fade } from "svelte/transition"
@@ -38,8 +43,8 @@
 				onchange={() => {
 					setTaxBracket(pausalInfo.tax)
 					toast.success("Uspješno ste promijenili porezni razred", {
-						position: "bottom-center",
-						style: "background-color: #333; color: white;"
+						position: screen.isMobile ? "top-right" : "bottom-center",
+						className: "toast-css"
 					})
 				}}
 			>
@@ -131,8 +136,8 @@
 							...pausalInfo.turisticke_zajednice_info
 						})
 						toast.success("Uspješno ste promijenili skupinu i promet", {
-							position: "bottom-center",
-							style: "background-color: #333; color: white;"
+							position: screen.isMobile ? "top-right" : "bottom-center",
+							className: "toast-css"
 						})
 					}}>Primijeni</button
 				>
