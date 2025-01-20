@@ -9,7 +9,7 @@
 	},
 	"drugi": {
 		"title": "2. razred",
-		"start": 11301.0,
+		"start": 11300.01,
 		"end": 15300.0,
 		"currency": "EUR",
 		"symbol": "€",
@@ -17,7 +17,7 @@
 	},
 	"treci": {
 		"title": "3. razred",
-		"start": 15301.0,
+		"start": 15300.01,
 		"end": 19900.0,
 		"currency": "EUR",
 		"symbol": "€",
@@ -25,7 +25,7 @@
 	},
 	"cetvrti": {
 		"title": "4. razred",
-		"start": 19901.0,
+		"start": 19900.01,
 		"end": 30600.0,
 		"currency": "EUR",
 		"symbol": "€",
@@ -33,10 +33,26 @@
 	},
 	"peti": {
 		"title": "5. razred",
-		"start": 30601.0,
+		"start": 30600.01,
 		"end": 40000.0,
 		"currency": "EUR",
 		"symbol": "€",
 		"pay": 180.0
+	},
+	"sesti": {
+		"title": "6. razred",
+		"start": 40000.01,
+		"end": 50000.0,
+		"currency": "EUR",
+		"symbol": "€",
+		"pay": 225.0
+	},
+	"sedmi": {
+		"title": "7. razred",
+		"start": 50000.01,
+		"end": 60000.0,
+		"currency": "EUR",
+		"symbol": "€",
+		"pay": 270.0
 	}
 }
